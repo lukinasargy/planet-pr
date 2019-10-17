@@ -1,0 +1,15 @@
+@mixin btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: $color-one;
+    line-height: 50px;
+    padding: 0 78px;
+    border-radius: 2px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+        color: #fff;
+        background-color: #268614;
+    }
+}
