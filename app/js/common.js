@@ -15,7 +15,7 @@ $(function () {
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         
-        $('body,html').animate({scrollTop: top}, 500);
+        $('body,html').animate({scrollTop: top}, 1000);
     });
 
 
