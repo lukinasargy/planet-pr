@@ -18,14 +18,14 @@
 	display: inline-block;
 	color: #fff;
 	background-color: $color-one;
-		font-size: 18px;
-
+	font-size: 18px;
 	font-weight: bold;
-	border: 2px solid $color-one;
-	padding: 18px 35px 16px 72px ;
+	padding: 18px 35px 16px 72px;
 	text-transform: uppercase;
 	border-radius: 2px;
 	position: relative;
+	line-height: 21px;
+
 	&:before {
 		position: absolute;
 		content: '';
@@ -35,6 +35,7 @@
 		left: 35px;
 		top: 15px;
 	}
+
 	&:hover {
 		background-color: #0DD1A2;
 	}
@@ -47,19 +48,22 @@
 	font-size: 18px;
 	font-weight: bold;
 	border: 2px solid $color-one;
-	padding: 18px 50px 16px 88px ;
+	padding: 16px 50px 14px 88px;
 	text-transform: uppercase;
 	border-radius: 2px;
 	position: relative;
+	line-height: 21px;
+
 	&:before {
 		position: absolute;
 		content: '';
 		width: 31px;
 		height: 31px;
 		left: 35px;
-		top: 15px;
+		top: 10px;
 		background-image: url(../img/video.svg);
 	}
+
 	&:hover {
 		background-color: $color-one;
 	}
