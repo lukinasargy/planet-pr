@@ -13,9 +13,9 @@
 //Medium: ≥768px
 @include media-breakpoint-down(md) {
 	.container {
-		width: 100%;
-		max-width: 320px;
-		padding: 0 10px;
+//		width: 100%;
+//		max-width: 320px;
+//		padding: 0 10px;
 	}
 
 	.desktop {
@@ -45,4 +45,8 @@
 //@include media-breakpoint-up(lg) {}
 
 //Extra large: ≤1200px
-//@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+	.container {
+		width: 1200px;
+	}
+}

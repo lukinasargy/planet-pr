@@ -1,15 +1,66 @@
-@mixin btn {
-    font-size: 18px;
-    text-transform: uppercase;
-    display: inline-block;
-    background-color: $color-one;
-    line-height: 50px;
-    padding: 0 78px;
-    border-radius: 2px;
-    transition: all 0.3s;
-    cursor: pointer;
-    &:hover {
-        color: #fff;
-        background-color: #268614;
-    }
+@mixin btn-small {
+	display: inline-block;
+	color: #fff;
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: bold;
+	border: 2px solid $color-one;
+	padding: 9px 15px;
+	text-transform: uppercase;
+	border-radius: 2px;
+
+	&:hover {
+		background-color: $color-one;
+	}
+}
+
+@mixin btn-primary {
+	display: inline-block;
+	color: #fff;
+	background-color: $color-one;
+		font-size: 18px;
+
+	font-weight: bold;
+	border: 2px solid $color-one;
+	padding: 18px 35px 16px 72px ;
+	text-transform: uppercase;
+	border-radius: 2px;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		width: 31px;
+		height: 31px;
+		background-image: url(../img/ticket.svg);
+		left: 35px;
+		top: 15px;
+	}
+	&:hover {
+		background-color: #0DD1A2;
+	}
+}
+
+@mixin btn-secondary {
+	display: inline-block;
+	color: #fff;
+	background-color: transparent;
+	font-size: 18px;
+	font-weight: bold;
+	border: 2px solid $color-one;
+	padding: 18px 50px 16px 88px ;
+	text-transform: uppercase;
+	border-radius: 2px;
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		width: 31px;
+		height: 31px;
+		left: 35px;
+		top: 15px;
+		background-image: url(../img/video.svg);
+	}
+	&:hover {
+		background-color: $color-one;
+	}
 }
