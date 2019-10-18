@@ -768,16 +768,28 @@ DEFAULT CSS END
 	&__img {
 		margin-bottom: 22px;
 	}
+	&__subtitle {
+		font-size: 21px;
+		font-weight: 700;
+		margin-bottom: 10px;
+		width: 107px;
+	}
+	&__text {
+		font-size: 15px;
+	}
 }
 
+// slick slider custom styles start
 .custom_paging {
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 500;
 	margin-left: 107px;
 	margin-top: 18px;
+
 	&-count {
-		color:#ABABAB
+		color: #ABABAB;
+		font-weight: 400;
 	}
 }
 
@@ -797,9 +809,13 @@ DEFAULT CSS END
 	height: 48px;
 	transform: rotate(0deg);
 	background-color: #1C1C1C;
-	&:hover,:focus, {
-    background: #1C1C1C;
+
+	&:hover,
+	:focus,
+		{
+		background: #1C1C1C;
 	}
+
 	&:after {
 		position: absolute;
 		content: '';
@@ -816,13 +832,49 @@ DEFAULT CSS END
 .slick-prev {
 	left: 189px;
 }
+
 .slick-next {
 	left: 249px;
-	&:after {
-				transform: rotate(135deg);
 
+	&:after {
+		transform: rotate(135deg);
 	}
 }
+.faq {
+	&__title {
+		margin-bottom: 28px;
+		
+	}
+	&__item {
+				margin-bottom: 5px;
+
+	}
+	&__subtitle {
+		font-weight: 500;
+		font-size: 17px;
+		display: inline-block;
+		background-color: #fff;
+		color: #000;
+		padding: 10px 8px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			
+		}
+	}
+	&__text {
+				background-color: #fff;
+		color: #000;
+		padding: 10px 8px 20px ;
+
+	}
+	
+}
+
+// slick slider custom styles END
+
+
 @keyframes loader {
 	0% {
 		transform: rotate(0deg)

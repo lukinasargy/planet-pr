@@ -749,6 +749,15 @@ DEFAULT CSS END
 .how__img {
   margin-bottom: 22px
 }
+.how__subtitle {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  width: 107px
+}
+.how__text {
+  font-size: 15px
+}
 .custom_paging {
   display: inline-block;
   font-size: 18px;
@@ -757,7 +766,8 @@ DEFAULT CSS END
   margin-top: 18px
 }
 .custom_paging-count {
-  color: #ababab
+  color: #ababab;
+  font-weight: 400
 }
 [role=presentation] {
   display: none
@@ -807,6 +817,30 @@ DEFAULT CSS END
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg)
+}
+.faq__title {
+  margin-bottom: 28px
+}
+.faq__item {
+  margin-bottom: 5px
+}
+.faq__subtitle {
+  font-weight: 500;
+  font-size: 17px;
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 8px;
+  position: relative
+}
+.faq__subtitle:after {
+  content: '';
+  position: absolute
+}
+.faq__text {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 8px 20px
 }
 @-webkit-keyframes loader {
   0% {
