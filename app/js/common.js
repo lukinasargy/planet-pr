@@ -1,26 +1,39 @@
 $(function () {
 
 	$('.how__list').slick({
-		dots:true,
-		dotsClass: 'custom_paging',
-		slidesToShow: 1,
-		autoplay: true,
-		autoplaySpeed: 8000,
-		adaptiveHeight: true,
-		customPaging: function (slider, i) {
-        return  (i + 1) + '/' + '<span class="custom_paging-count">' + slider.slideCount + '</span>';
-    }
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					dots: true,
+					dotsClass: 'custom_paging',
+					slidesToShow: 1,
+					autoplay: true,
+					autoplaySpeed: 8000,
+					adaptiveHeight: true,
+					customPaging: function (slider, i) {
+						return (i + 1) + '/' + '<span class="custom_paging-count">' + slider.slideCount + '</span>';
+					},
+				}
+			},
+			{
+				breakpoint: 5000,
+				settings: 'unslick'
+			}
+		]
 	});
 
 	//scrolls
-    $(".js_scroll").on("click", function (event) {
-        event.preventDefault();
+	$(".js_scroll").on("click", function (event) {
+		event.preventDefault();
 
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        
-        $('body,html').animate({scrollTop: top}, 1000);
-    });
+		var id = $(this).attr('href'),
+			top = $(id).offset().top;
+
+		$('body,html').animate({
+			scrollTop: top
+		}, 1000);
+	});
 
 
 	//animations
@@ -44,13 +57,23 @@ $(function () {
 			});
 		});
 	});
-	
-	$(".toggler").on('click', function() {
+
+	$(".toggler").on('click', function () {
 		$(this).toggleClass('toggler--active');
 		$(".menu").toggleClass('menu--active');
 		$(".header").toggleClass('header--active');
-	})
-	
+	});
+	$('.faq__subtitle').on('click', function () {
+
+		$(this).toggleClass('faq__subtitle--active');
+		$(this).parent().toggleClass('faq__item--active').children('.faq__text').slideToggle(500)
+;
+
+
+	});
+
+
+
 
 
 

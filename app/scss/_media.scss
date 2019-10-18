@@ -52,4 +52,32 @@
 	.mobile {
 		display: none;
 	}
+	.header {
+		&__link {
+			&--home {
+						width: 193px;
+
+			}
+		}
+	}
+	.home {
+		&__text {
+			display: block;
+		}
+	}
+	.menu {
+		position: relative;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+	}
+	.nav {
+		flex-direction: row;
+	}
+	.toggler {
+		display: none;
+	}
 }

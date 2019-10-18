@@ -427,6 +427,7 @@ input[type=number] {
 }
 .section-title {
   font-size: 28px;
+  line-height: 32px;
   display: inline-block;
   padding-bottom: 10px;
   font-weight: 500;
@@ -515,7 +516,10 @@ DEFAULT CSS END
   padding: 9px 15px;
   text-transform: uppercase;
   -webkit-border-radius: 2px;
-  border-radius: 2px
+  border-radius: 2px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s
 }
 .header__link--order:active,
 .header__link--order:focus,
@@ -561,6 +565,11 @@ DEFAULT CSS END
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase
+}
+.toggler {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s
 }
 .toggler--active svg rect:first-child {
   -webkit-transition: all .3s;
@@ -675,6 +684,9 @@ DEFAULT CSS END
   border-radius: 2px;
   position: relative;
   line-height: 21px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
   margin-bottom: 12px
 }
 .promo__order:before {
@@ -704,6 +716,9 @@ DEFAULT CSS END
   border-radius: 2px;
   position: relative;
   line-height: 21px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
   margin-bottom: 57px
 }
 .promo__video:before {
@@ -822,24 +837,55 @@ DEFAULT CSS END
   margin-bottom: 28px
 }
 .faq__item {
-  margin-bottom: 5px
+  margin-bottom: 5px;
+  background-color: #fff
 }
 .faq__subtitle {
   font-weight: 500;
   font-size: 17px;
-  display: inline-block;
-  background-color: #fff;
+  display: block;
   color: #000;
   padding: 10px 8px;
+  position: relative;
+  padding-right: 33px;
   position: relative
+}
+.faq__subtitle:before {
+  content: '';
+  position: absolute;
+  width: 33px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #0dd1a2;
+  -webkit-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out
 }
 .faq__subtitle:after {
   content: '';
-  position: absolute
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 8px;
+  top: -webkit-calc(50% - 8px);
+  top: calc(50% - 8px);
+  background-image: url(../img/plus.svg);
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all
+}
+.faq__subtitle--active:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+.faq__subtitle--active:before {
+  background-color: #000
 }
 .faq__text {
-  background-color: #fff;
   color: #000;
+  display: none;
   padding: 10px 8px 20px
 }
 @-webkit-keyframes loader {
@@ -1114,6 +1160,37 @@ DEFAULT CSS END
     width: 1200px
   }
   .mobile {
+    display: none
+  }
+  .header__link--home {
+    width: 193px
+  }
+  .home__text {
+    display: block
+  }
+  .menu {
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row
+  }
+  .toggler {
     display: none
   }
 }
