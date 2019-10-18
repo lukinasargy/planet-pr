@@ -1,11 +1,15 @@
 $(function () {
 
 	$('.how__list').slick({
-		dots: false,
+		dots:true,
+		dotsClass: 'custom_paging',
 		slidesToShow: 1,
 		autoplay: true,
 		autoplaySpeed: 8000,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		customPaging: function (slider, i) {
+        return  (i + 1) + '/' + '<span class="custom_paging-count">' + slider.slideCount + '</span>';
+    }
 	});
 
 	//scrolls

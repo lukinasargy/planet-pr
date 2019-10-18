@@ -375,10 +375,17 @@ body {
   font-family: Ubuntu,sans-serif;
   overflow-x: hidden;
   background-color: #2d2d2d;
-  line-height: 1.5;
+  line-height: 150%;
   color: #fff;
   font-weight: 300;
-  font-size: 15px
+  font-size: 15px;
+  background-image: url(../img/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative
 }
 body input,
 body textarea {
@@ -413,19 +420,41 @@ input[type=number] {
   margin: auto;
   padding: 0 16px
 }
-.visible {
-  -webkit-transition-delay: .1s;
-  -o-transition-delay: .1s;
-  transition-delay: .1s;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s
+.section {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 124px
+}
+.section-title {
+  font-size: 28px;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-weight: 500;
+  min-width: 288px;
+  border-bottom: 3px solid #0dd1a2
 }
 /*!
 *
 DEFAULT CSS END
 *
 */
+.main {
+  position: relative
+}
+.main:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 0;
+  top: 0;
+  background: -webkit-linear-gradient(187.41deg,#171a1c 0,rgba(94,94,87,.72) 99.69%);
+  background: -o-linear-gradient(187.41deg,#171a1c 0,rgba(94,94,87,.72) 99.69%);
+  background: linear-gradient(262.59deg,#171a1c 0,rgba(94,94,87,.72) 99.69%);
+  mix-blend-mode: normal;
+  opacity: .5
+}
 .header {
   position: fixed;
   top: 0;
@@ -488,6 +517,8 @@ DEFAULT CSS END
   -webkit-border-radius: 2px;
   border-radius: 2px
 }
+.header__link--order:active,
+.header__link--order:focus,
 .header__link--order:hover {
   background-color: #0dd1a2
 }
@@ -530,16 +561,6 @@ DEFAULT CSS END
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase
-}
-.toggler {
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s
-}
-.toggler svg {
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s
 }
 .toggler--active svg rect:first-child {
   -webkit-transition: all .3s;
@@ -645,7 +666,7 @@ DEFAULT CSS END
 .promo__order {
   display: inline-block;
   color: #fff;
-  background-color: #0dd1a2;
+  background-color: #15b38d;
   font-size: 18px;
   font-weight: 700;
   padding: 18px 35px 16px 72px;
@@ -665,6 +686,8 @@ DEFAULT CSS END
   left: 35px;
   top: 15px
 }
+.promo__order:active,
+.promo__order:focus,
 .promo__order:hover {
   background-color: #0dd1a2
 }
@@ -692,6 +715,8 @@ DEFAULT CSS END
   top: 10px;
   background-image: url(../img/video.svg)
 }
+.promo__video:active,
+.promo__video:focus,
 .promo__video:hover {
   background-color: #0dd1a2
 }
@@ -710,6 +735,78 @@ DEFAULT CSS END
   border-right: 1px solid rgba(255,255,255,.5);
   -webkit-animation: 2s ease-in infinite down-move;
   animation: 2s ease-in infinite down-move
+}
+.about__title {
+  margin-bottom: 48px
+}
+.about__text {
+  font-size: 17px;
+  margin-bottom: 25px
+}
+.how__title {
+  margin-bottom: 43px
+}
+.how__img {
+  margin-bottom: 22px
+}
+.custom_paging {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 107px;
+  margin-top: 18px
+}
+.custom_paging-count {
+  color: #ababab
+}
+[role=presentation] {
+  display: none
+}
+.slick-active {
+  display: block
+}
+.slick-next,
+.slick-prev {
+  top: -webkit-calc(100% - 36px);
+  top: calc(100% - 36px);
+  border: none;
+  width: 60px;
+  height: 48px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  background-color: #1c1c1c
+}
+.slick-next :focus,
+.slick-next:hover,
+.slick-prev :focus,
+.slick-prev:hover {
+  background: #1c1c1c
+}
+.slick-next:after,
+.slick-prev:after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  top: 18px;
+  height: 12px;
+  border-left: 1px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 26px
+}
+.slick-prev {
+  left: 189px
+}
+.slick-next {
+  left: 249px
+}
+.slick-next:after {
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg)
 }
 @-webkit-keyframes loader {
   0% {
@@ -921,40 +1018,44 @@ DEFAULT CSS END
   }
 }
 @-webkit-keyframes close-first {
-  from {
-    width: 24
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+    transform: rotate(0) translateX(0) translateY(0)
   }
-  to {
+  100% {
     -webkit-transform: rotate(45deg) translateX(13px) translateY(-14px);
     transform: rotate(45deg) translateX(13px) translateY(-14px);
     width: 25px
   }
 }
 @keyframes close-first {
-  from {
-    width: 24
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+    transform: rotate(0) translateX(0) translateY(0)
   }
-  to {
+  100% {
     -webkit-transform: rotate(45deg) translateX(13px) translateY(-14px);
     transform: rotate(45deg) translateX(13px) translateY(-14px);
     width: 25px
   }
 }
 @-webkit-keyframes close-second {
-  from {
-    width: 24
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+    transform: rotate(0) translateX(0) translateY(0)
   }
-  to {
+  100% {
     -webkit-transform: rotate(-45deg) translateX(-25px) translateY(14px);
     transform: rotate(-45deg) translateX(-25px) translateY(14px);
     width: 25px
   }
 }
 @keyframes close-second {
-  from {
-    width: 24
+  0% {
+    -webkit-transform: rotate(0) translateX(0) translateY(0);
+    transform: rotate(0) translateX(0) translateY(0)
   }
-  to {
+  100% {
     -webkit-transform: rotate(-45deg) translateX(-25px) translateY(14px);
     transform: rotate(-45deg) translateX(-25px) translateY(14px);
     width: 25px
@@ -977,5 +1078,8 @@ DEFAULT CSS END
 @media (min-width:1200px) {
   .container {
     width: 1200px
+  }
+  .mobile {
+    display: none
   }
 }

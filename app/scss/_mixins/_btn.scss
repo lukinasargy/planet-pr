@@ -9,7 +9,7 @@
 	text-transform: uppercase;
 	border-radius: 2px;
 
-	&:hover {
+	&:hover,&:focus, &:active {
 		background-color: $color-one;
 	}
 }
@@ -17,7 +17,7 @@
 @mixin btn-primary {
 	display: inline-block;
 	color: #fff;
-	background-color: $color-one;
+	background-color: #15B38D;
 	font-size: 18px;
 	font-weight: bold;
 	padding: 18px 35px 16px 72px;
@@ -36,7 +36,7 @@
 		top: 15px;
 	}
 
-	&:hover {
+	&:hover,&:focus, &:active  {
 		background-color: #0DD1A2;
 	}
 }
@@ -64,7 +64,7 @@
 		background-image: url(../img/video.svg);
 	}
 
-	&:hover {
+	&:hover,&:focus, &:active  {
 		background-color: $color-one;
 	}
 }
