@@ -559,20 +559,7 @@ DEFAULT CSS END
 	}
 
 	&__link {
-		&--home {
-			position: relative;
-			width: 28px;
-			height: 28px;
-
-			&:before {
-				position: absolute;
-				content: '';
-				left: 0;
-				width: 28px;
-				height: 28px;
-				background-image: url(../img/logo.svg);
-			}
-		}
+		&--home {}
 
 		&--order {
 			@include btn-small;
@@ -583,6 +570,22 @@ DEFAULT CSS END
 		background-color: #1C1C1C;
 		opacity: 0.9;
 		height: 100%;
+	}
+}
+
+.home {
+
+	position: relative;
+	width: 28px;
+	height: 28px;
+
+	&:before {
+		position: absolute;
+		content: '';
+		left: 0;
+		width: 28px;
+		height: 28px;
+		background-image: url(../img/logo.svg);
 	}
 }
 

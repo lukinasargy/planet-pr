@@ -66,12 +66,23 @@ $(function () {
 	$('.faq__subtitle').on('click', function () {
 
 		$(this).toggleClass('faq__subtitle--active');
-		$(this).parent().toggleClass('faq__item--active').children('.faq__text').slideToggle(500)
-;
+		$(this).parent().toggleClass('faq__item--active').children('.faq__text').slideToggle(500);
 
 
 	});
 
+	$(window).on("resize load", function () {
+		if (window.matchMedia("(min-width:1200px)").matches) {
+			const h = document.getElementById("header-container");
+			const p = document.getElementById("promo-container");
+			$(".contacts__link--tel").appendTo(h);
+			$(".contacts__social").appendTo(p);
+		}
+		else {
+			$(".contacts__link--tel").appendTo(".contacts");
+			$(".contacts__social").appendTo(".contacts");
+		}
+	});
 
 
 
