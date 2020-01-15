@@ -56,7 +56,7 @@
 
 	.header {
 		.container {
-					align-items: flex-end;
+			align-items: flex-end;
 
 		}
 	}
@@ -85,9 +85,10 @@
 		display: -o-flex;
 		display: flex;
 		flex-direction: row;
-		padding-top: 43px;
+		padding-top: 44px;
+		padding-bottom: 8px;
 		width: auto;
-//		height: 74px;
+		//		height: 74px;
 
 	}
 
@@ -96,14 +97,298 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		border: none;
-		padding-left: 80px;
+		padding-left: 0px;
+		justify-content: space-between;
+		width: 619px;
 
 		&__link {
 			margin-bottom: 0;
 		}
 	}
 
+	.contacts {
+		padding-left: 0;
+
+		&__link--tel {
+			margin-bottom: 10px;
+		}
+	}
+
 	.toggler {
 		display: none;
+	}
+
+	.main {
+		&:before {
+			background: none;
+		}
+	}
+
+	.promo {
+		&:before {
+			//			display: none;
+			//			background: ;
+			background: none;
+			opacity: 1;
+			background-repeat: no-repeat;
+			background-image: url(../img/kid_VR.png);
+			background-position: 100% 100%;
+
+			//			bottom: 0;
+			//			right: 0
+		}
+
+		& .container {
+			//			align-items: flex-start;
+			padding-top: 227px;
+			display: block;
+		}
+
+		&__title {
+			font-weight: 500;
+			font-size: 96px;
+			line-height: 111px;
+			text-align: left;
+		}
+
+		&__text {
+			font-size: 17px;
+			width: 500px;
+			text-align: left;
+			margin-bottom: 71px;
+		}
+
+		&__btn {
+			text-align: left;
+			//			margin-bottom: 154px;
+		}
+
+		&__order {
+			padding: 22px 40px 22px 82px;
+			margin-right: 24px;
+			line-height: 25px;
+			margin-bottom: 0;
+
+			&:before {
+				left: 40px;
+				top: 20px;
+			}
+		}
+
+		&__video {
+			padding: 20px 40px 20px 80px;
+			margin-bottom: 0;
+			line-height: 25px;
+
+			&:before {
+				top: 18px;
+				left: 40px;
+			}
+		}
+
+		&__scroll {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			position: absolute;
+			left: 50%;
+			bottom: 44px;
+			text-transform: uppercase;
+			font-size: 11px;
+		}
+
+	}
+
+	.contacts__social {
+		left: -50px;
+		position: absolute;
+		bottom: 30px;
+	}
+
+	.about {
+		padding-top: 150px;
+		position: relative;
+
+		&__title {
+			font-size: 44px;
+			line-height: 51px;
+
+		}
+
+		&__text {
+			width: 800px;
+		}
+	}
+
+	.scroll {
+		position: absolute;
+		bottom: 30px;
+		left: calc(50% - 7px);
+		width: 20px;
+		height: 20px;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0px;
+			left: calc(50% - 7px);
+			width: 12px;
+			height: 12px;
+			border-bottom: 1px solid #E5E5E5;
+			border-right: 1px solid #E5E5E5;
+			animation: 2s ease-in infinite down-move;
+		}
+	}
+
+	.how {
+		&__title {
+			font-size: 44px;
+			line-height: 51px;
+		}
+
+		&__list {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 20px;
+		}
+
+		&__item {
+			width: 535px;
+
+			&--2 {
+				margin-top: 25px;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					content: '';
+					background-image: url(../img/1-2.svg);
+					width: 248px;
+					height: 47px;
+					left: -190px;
+				}
+			}
+
+			&--3 {
+				margin-top: 51px;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					content: '';
+					background-image: url(../img/2-3.svg);
+					width: 463px;
+					height: 62.5px;
+					left: 88px;
+					top: -70px;
+				}
+			}
+
+			&--4 {
+				margin-top: 68px;
+				margin-left: 78px;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					content: '';
+					background-image: url(../img/3-4.svg);
+					width: 256px;
+					height: 41px;
+					left: -250px;
+					top: 13px;
+				}
+			}
+		}
+
+		&__img {
+			display: inline-block;
+			float: left;
+			margin-bottom: 0;
+			margin-right: 20px;
+			width: 215px;
+		}
+
+		&__right {
+			display: inline-block;
+			float: left;
+			margin-top: 10px;
+		}
+
+		&__subtitle {
+			width: 110px;
+		}
+
+		&__text {
+			width: 300px;
+		}
+	}
+
+	.faq {
+		position: relative;
+
+		&:after {
+			position: absolute;
+			content: '';
+			background-image: url(../img/boy.png);
+			width: 235px;
+			height: 264px;
+			background-size: 100%;
+			right: 0;
+			bottom: 0;
+		}
+
+		&__title {
+			font-size: 44px;
+			margin-bottom: 40px;
+		}
+		&__list {
+			width: 904px;
+		}
+		&__item {
+			position: relative;
+
+			&:before {
+				position: absolute;
+				content: '';
+				left: 20px;
+				top: 28px;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $color-one;
+			}
+		}
+
+		&__subtitle {
+			padding: 20px 40px;
+			font-size: 21px;
+			cursor: pointer;
+
+			&--active:before {
+				background-color: $color-one;
+			}
+
+			&:before {
+				width: 72px;
+			}
+
+			&:after {
+				right: 22px;
+				width: 22px;
+				height: 22px;
+				top: calc(50% - 11px);
+				background-position: 50% 50%;
+			}
+		}
+
+		&__text {
+			width: 640px;
+			padding: 0 0px 30px 50px;
+		}
 	}
 }

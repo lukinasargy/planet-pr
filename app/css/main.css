@@ -375,7 +375,7 @@ body {
   font-family: Ubuntu,sans-serif;
   overflow-x: hidden;
   background-color: #2d2d2d;
-  line-height: 150%;
+  line-height: 1.5;
   color: #fff;
   font-weight: 300;
   font-size: 15px;
@@ -500,7 +500,8 @@ DEFAULT CSS END
   font-size: 14px;
   font-weight: 700;
   border: 2px solid #0dd1a2;
-  padding: 9px 15px;
+  padding: 7px 13px;
+  line-height: 16px;
   text-transform: uppercase;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -630,8 +631,6 @@ DEFAULT CSS END
   content: '';
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
   background: -webkit-linear-gradient(189.97deg,#171a1c 0,rgba(94,94,87,.72) 99.69%);
   background: -o-linear-gradient(189.97deg,#171a1c 0,rgba(94,94,87,.72) 99.69%);
   background: linear-gradient(260.03deg,#171a1c 0,rgba(94,94,87,.72) 99.69%);
@@ -703,6 +702,9 @@ DEFAULT CSS END
 .promo__order:hover {
   background-color: #0dd1a2
 }
+.promo__btn {
+  text-align: center
+}
 .promo__video {
   display: inline-block;
   color: #fff;
@@ -743,7 +745,8 @@ DEFAULT CSS END
   position: absolute;
   content: '';
   top: 21px;
-  left: 37px;
+  left: -webkit-calc(50% - 7px);
+  left: calc(50% - 7px);
   width: 10px;
   height: 10px;
   border-bottom: 1px solid rgba(255,255,255,.5);
@@ -1079,7 +1082,8 @@ DEFAULT CSS END
   }
   to {
     opacity: 1;
-    left: 37px;
+    left: -webkit-calc(50% - 7px);
+    left: calc(50% - 7px);
     -webkit-transform: rotate(45deg) translateY(5px) translateX(5px);
     transform: rotate(45deg) translateY(5px) translateX(5px)
   }
@@ -1092,7 +1096,8 @@ DEFAULT CSS END
   }
   to {
     opacity: 1;
-    left: 37px;
+    left: -webkit-calc(50% - 7px);
+    left: calc(50% - 7px);
     -webkit-transform: rotate(45deg) translateY(5px) translateX(5px);
     transform: rotate(45deg) translateY(5px) translateX(5px)
   }
@@ -1111,7 +1116,7 @@ DEFAULT CSS END
     display: none
   }
 }
-@media (min-width:1200px) {
+@media (min-width:1366px) {
   .container {
     width: 1200px
   }
@@ -1151,7 +1156,8 @@ DEFAULT CSS END
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    padding-top: 43px;
+    padding-top: 44px;
+    padding-bottom: 8px;
     width: auto
   }
   .nav {
@@ -1163,12 +1169,253 @@ DEFAULT CSS END
     margin-top: 0;
     margin-bottom: 0;
     border: none;
-    padding-left: 80px
+    padding-left: 0;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 619px
   }
   .nav__link {
     margin-bottom: 0
   }
+  .contacts {
+    padding-left: 0
+  }
+  .contacts__link--tel {
+    margin-bottom: 10px
+  }
   .toggler {
     display: none
+  }
+  .main:before {
+    background: 0 0
+  }
+  .promo:before {
+    background: 0 0;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-image: url(../img/kid_VR.png);
+    background-position: 100% 100%
+  }
+  .promo .container {
+    padding-top: 227px;
+    display: block
+  }
+  .promo__title {
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 111px;
+    text-align: left
+  }
+  .promo__text {
+    font-size: 17px;
+    width: 500px;
+    text-align: left;
+    margin-bottom: 71px
+  }
+  .promo__btn {
+    text-align: left
+  }
+  .promo__order {
+    padding: 22px 40px 22px 82px;
+    margin-right: 24px;
+    line-height: 25px;
+    margin-bottom: 0
+  }
+  .promo__order:before {
+    left: 40px;
+    top: 20px
+  }
+  .promo__video {
+    padding: 20px 40px 20px 80px;
+    margin-bottom: 0;
+    line-height: 25px
+  }
+  .promo__video:before {
+    top: 18px;
+    left: 40px
+  }
+  .promo__scroll {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 44px;
+    text-transform: uppercase;
+    font-size: 11px
+  }
+  .contacts__social {
+    left: -50px;
+    position: absolute;
+    bottom: 30px
+  }
+  .about {
+    padding-top: 150px;
+    position: relative
+  }
+  .about__title {
+    font-size: 44px;
+    line-height: 51px
+  }
+  .about__text {
+    width: 800px
+  }
+  .scroll {
+    position: absolute;
+    bottom: 30px;
+    left: -webkit-calc(50% - 7px);
+    left: calc(50% - 7px);
+    width: 20px;
+    height: 20px
+  }
+  .scroll:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -webkit-calc(50% - 7px);
+    left: calc(50% - 7px);
+    width: 12px;
+    height: 12px;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    -webkit-animation: 2s ease-in infinite down-move;
+    animation: 2s ease-in infinite down-move
+  }
+  .how__title {
+    font-size: 44px;
+    line-height: 51px
+  }
+  .how__list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 20px
+  }
+  .how__item {
+    width: 535px
+  }
+  .how__item--2 {
+    margin-top: 25px;
+    position: relative
+  }
+  .how__item--2:before {
+    position: absolute;
+    content: '';
+    background-image: url(../img/1-2.svg);
+    width: 248px;
+    height: 47px;
+    left: -190px
+  }
+  .how__item--3 {
+    margin-top: 51px;
+    position: relative
+  }
+  .how__item--3:before {
+    position: absolute;
+    content: '';
+    background-image: url(../img/2-3.svg);
+    width: 463px;
+    height: 62.5px;
+    left: 88px;
+    top: -70px
+  }
+  .how__item--4 {
+    margin-top: 68px;
+    margin-left: 78px;
+    position: relative
+  }
+  .how__item--4:before {
+    position: absolute;
+    content: '';
+    background-image: url(../img/3-4.svg);
+    width: 256px;
+    height: 41px;
+    left: -250px;
+    top: 13px
+  }
+  .how__img {
+    display: inline-block;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: 215px
+  }
+  .how__right {
+    display: inline-block;
+    float: left;
+    margin-top: 10px
+  }
+  .how__subtitle {
+    width: 110px
+  }
+  .how__text {
+    width: 300px
+  }
+  .faq {
+    position: relative
+  }
+  .faq:after {
+    position: absolute;
+    content: '';
+    background-image: url(../img/boy.png);
+    width: 235px;
+    height: 264px;
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    right: 0;
+    bottom: 0
+  }
+  .faq__title {
+    font-size: 44px;
+    margin-bottom: 40px
+  }
+  .faq__list {
+    width: 904px
+  }
+  .faq__item {
+    position: relative
+  }
+  .faq__item:before {
+    position: absolute;
+    content: '';
+    left: 20px;
+    top: 28px;
+    width: 8px;
+    height: 8px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #0dd1a2
+  }
+  .faq__subtitle {
+    padding: 20px 40px;
+    font-size: 21px;
+    cursor: pointer
+  }
+  .faq__subtitle--active:before {
+    background-color: #0dd1a2
+  }
+  .faq__subtitle:before {
+    width: 72px
+  }
+  .faq__subtitle:after {
+    right: 22px;
+    width: 22px;
+    height: 22px;
+    top: -webkit-calc(50% - 11px);
+    top: calc(50% - 11px);
+    background-position: 50% 50%
+  }
+  .faq__text {
+    width: 640px;
+    padding: 0 0 30px 50px
   }
 }

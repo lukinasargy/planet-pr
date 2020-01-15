@@ -72,11 +72,9 @@ $(function () {
 	});
 
 	$(window).on("resize load", function () {
-		if (window.matchMedia("(min-width:1200px)").matches) {
-			const h = document.getElementById("header-container");
-			const p = document.getElementById("promo-container");
-			$(".contacts__link--tel").appendTo(h);
-			$(".contacts__social").appendTo(p);
+		if (window.matchMedia("(min-width:1366px)").matches) {
+			$(".contacts__link--tel").appendTo($('#header-container'));
+			$(".contacts__social").appendTo($('#promo-container'));
 		}
 		else {
 			$(".contacts__link--tel").appendTo(".contacts");

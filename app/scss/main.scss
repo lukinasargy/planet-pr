@@ -445,7 +445,7 @@ body {
 	font-family: $first-font;
 	overflow-x: hidden;
 	background-color: $color-two;
-	line-height: 150%;
+	line-height: 1.5;
 	color: #fff;
 	font-weight: 300;
 	font-size: 15px;
@@ -701,8 +701,8 @@ DEFAULT CSS END
 		content: '';
 		width: 100%;
 		height: 100%;
-		left: 0px;
-		top: 0px;
+//		left: 0px;
+//		top: 0px;
 		background: linear-gradient(260.03deg, #171A1C 0%, rgba(94, 94, 87, 0.72) 99.69%);
 		mix-blend-mode: normal;
 		opacity: 0.4;
@@ -741,6 +741,9 @@ DEFAULT CSS END
 		margin-bottom: 12px;
 
 	}
+	&__btn {
+		text-align: center;
+	}
 
 	&__video {
 		@include btn-secondary;
@@ -755,7 +758,7 @@ DEFAULT CSS END
 			position: absolute;
 			content: '';
 			top: 21px;
-			left: 37px;
+			left: calc(50% - 7px);
 			width: 10px;
 			height: 10px;
 			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -884,7 +887,6 @@ DEFAULT CSS END
 		position: relative;
 		padding-right: 33px;
 		position: relative;
-
 		&:before {
 			content: '';
 			position: absolute;
@@ -1082,7 +1084,7 @@ DEFAULT CSS END
 
 	to {
 		opacity: 1;
-		left: 37px;
+		left: calc(50% - 7px);
 		transform: rotate(45deg) translateY(5px) translateX(5px)
 	}
 }
