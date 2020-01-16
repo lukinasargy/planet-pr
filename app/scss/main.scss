@@ -521,6 +521,7 @@ DEFAULT CSS END
 */
 .main {
 	position: relative;
+	overflow: hidden;
 
 	&:before {
 		//затемнение фона

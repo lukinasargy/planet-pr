@@ -29,7 +29,7 @@ gulp.task('styles', function() {
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss({ compatibility: 'ie9', format: 'beautify'})) // Opt., comment out when debugging
+	.pipe(cleancss({ compatibility: 'ie9', format: 'uglify'})) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browsersync.reload( {stream: true} ))
 });
